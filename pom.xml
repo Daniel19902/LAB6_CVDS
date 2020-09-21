@@ -128,11 +128,6 @@
         <configuration>
           <port>8080</port>
           <path>/</path>
-          <archive>
-            <manifest>
-              <mainClass>com.roufid.tutorials.AppTest</mainClass>
-            </manifest>
-          </archive>
         </configuration>
       </plugin>
     </plugins>
