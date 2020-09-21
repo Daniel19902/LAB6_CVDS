@@ -145,11 +145,6 @@
         <configuration>
           <port>8080</port>
           <path>/</path>
-          <archive>
-            <manifest>
-              <mainClass>edu.eci.cvds.calculator.model.FaceServlet</mainClass>
-            </manifest>
-          </archive>
         </configuration>
       </plugin>
     </plugins>
