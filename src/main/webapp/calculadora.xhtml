@@ -7,59 +7,63 @@
 
     <h:head>
     </h:head>
-    <h:form id="calculadora_form">
-        <h1> Bienvenido a la Calculadora Estadistica! </h1>
-        <p>Ingrese los numeros que desea evaluar en formato a;b;c;...</p>
-        <!--p:outputLabel
-        value="Valor de la moda: #{calculadoraBean.getModa()}">
-        </p:outputLabel-->
-        <br></br>
-        <p> Ingrese la lista de numeros ha evaluar :</p>
-        <span class="ui-float-label">
-           <p:inputText id="numbers" binding="#{numbers}" />
-        </span>
-        <br></br>
-        <br></br>
-        <p:outputLabel
-            value="Estos Son tus numeros : #{calculadoraBean.getNumbers()}">
-        </p:outputLabel>
-        <br></br>
-        <p:outputLabel
-                value="Este es el promedio : #{calculadoraBean.getPromedio()}">
-        </p:outputLabel>
-        <br></br>
-        <p:outputLabel
-                value="Esta es la desviacion Estandar : #{calculadoraBean.getDevEstandar()}">
-        </p:outputLabel>
-        <br></br>
-        <p:outputLabel
-                value="Esta es la varianza : #{calculadoraBean.getVarianza()}">
-        </p:outputLabel>
-        <br></br>
-        <p:outputLabel
-                value="Esta es la moda : #{calculadoraBean.getModa()}">
-        </p:outputLabel>
-        <br></br>
-        <p:outputLabel
-                value="Esta es la cantidad de numeros : #{calculadoraBean.getCantNumbers()}">
-        </p:outputLabel>
-        <br></br>
-        <br></br>
-        <p:commandButton
-                value="Calcular Valores" actionListener="#{calculadoraBean.setNumbersWeb(numbers.value)}" update="calculadora_form" >
-        </p:commandButton>
-        <br></br>
-        <h2> Estos han sido los numeros ingresados: </h2>
-        <p:dataTable value="#{calculadoraBean.getHistoria()}" var="item">
-            <p:column headerText="Historial" filterMatchMode="contains">
-                <p.center>
-                    <p:outputLabel value ="#{item}"/>
-                </p.center>
-            </p:column>
-        </p:dataTable>
-        <br></br>
-        <p:commandButton
-                value="Reiniciar" actionListener="#{calculadoraBean.restart()}" update="calculadora_form" >
-        </p:commandButton>
-    </h:form>
+    <body background="/resources/fondo2.jpg" >
+        <font color="#FFFFFF" face="Comic Sans MS">
+            <h:form id="calculadora_form">
+                <h1 align="center"><big> Bienvenido a la Calculadora Estadistica! </big></h1>
+                <!--p:outputLabel
+                value="Valor de la moda: #{calculadoraBean.getModa()}">
+                </p:outputLabel-->
+                <h2> Ingrese la lista de numeros ha evaluar :</h2>
+                <span class="ui-float-label">
+                    <p:inputText id="numbers" binding="#{numbers}" />
+                </span>
+                <br></br>
+                <h2> Resultados: </h2>
+                <p:outputLabel
+                    value="Numeros Ingresados : #{calculadoraBean.getNumbers()}">
+                </p:outputLabel>
+                <br></br>
+                <p:outputLabel
+                        value="Promedio : #{calculadoraBean.getPromedio()}">
+                </p:outputLabel>
+                <br></br>
+                <p:outputLabel
+                        value="Desviacion Estandar : #{calculadoraBean.getDevEstandar()}">
+                </p:outputLabel>
+                <br></br>
+                <p:outputLabel
+                        value="Varianza : #{calculadoraBean.getVarianza()}">
+                </p:outputLabel>
+                <br></br>
+                <p:outputLabel
+                        value="Moda : #{calculadoraBean.getModa()}">
+                </p:outputLabel>
+                <br></br>
+                <p:outputLabel
+                        value="Total de numeros : #{calculadoraBean.getCantNumbers()}">
+                </p:outputLabel>
+                <br></br>
+                <br></br>
+                <p:commandButton
+                        value="Calcular Valores" actionListener="#{calculadoraBean.setNumbersWeb(numbers.value)}" update="calculadora_form" >
+                </p:commandButton>
+                <br></br>
+                <br></br>
+                <p:dataTable value="#{calculadoraBean.getHistoria()}" var="item">
+                    <p:column headerText="Historial De Numeros" filterMatchMode="contains" style="display:block; text-align:left">
+                        <p:outputLabel value ="#{item}" style="display:block; text-align:center"/>
+                    </p:column>
+                </p:dataTable>
+                <br></br>
+                <p:commandButton
+                        value="Reiniciar" actionListener="#{calculadoraBean.restart()}" update="calculadora_form" >
+                </p:commandButton>
+                <br></br>
+                <br></br>
+                <p>Recuerde ingresar los numeros que desea evaluar en formato:</p>
+                <p>a;b;c;...</p>
+            </h:form>
+        </font>
+    </body>
 </html>
