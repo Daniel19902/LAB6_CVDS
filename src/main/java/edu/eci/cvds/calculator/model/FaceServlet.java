@@ -1,6 +1,7 @@
 package edu.eci.cvds.calculator.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.SessionScoped;
@@ -119,8 +120,8 @@ public class FaceServlet {
         this.numbers = numbers;
         int maximoNumRepe = 0;
         moda = 0;
+        int repe=0;
         for (Double i : this.numbers){
-            int repe=0;
             for(Double j : this.numbers){
                 if (i == j){
                     repe ++;
@@ -131,7 +132,7 @@ public class FaceServlet {
                 }
             }
         }
-        return maximoNumRepe;
+        return moda;
     }
 
     /**
